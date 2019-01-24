@@ -26,6 +26,7 @@ class StudentController extends Controller
      */
     public function create()
     {
+//        $clas
         return view('student.create');
     }
 
@@ -40,6 +41,11 @@ class StudentController extends Controller
         $request->validate([
             'name' => 'required',
             'email' => 'required',
+            'dateOfBirth' => 'required',
+            'phone' => 'required',
+//            'passport' => 'required',
+//            'class' => 'required',
+//            'address' => 'required',
         ]);
 
         Student::create($request->all());
@@ -83,10 +89,23 @@ class StudentController extends Controller
         $request->validate([
             'name' => 'required',
             'email' => 'required',
+            'dateOfBirth' => 'required',
+            'phone' => 'required',
+            'class_id' => 'required',
+
+//            'passport' => 'required',
+//            'class' => 'required',
+//            'address' => 'required',
         ]);
-        $student =Student::find($id);
+        $student = Student::find($id);
         $student->name = $request->get('name');
         $student->email = $request->get('email');
+        $student->dateOfBirth = $request->get('dateOfBirth');
+        $student->phone = $request->get('phone');
+        $student->class_id = $request->get('class_id');
+//        $student->passport = $request->get('passport');
+//        $student->class = $request->get('class');
+//        $student->address = $request->get('address');
         $student->save();
         return redirect()->route('student.index')
             ->with('success', 'Student name updated successfully');

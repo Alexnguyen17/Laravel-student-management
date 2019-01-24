@@ -32,6 +32,27 @@
                     <strong>Email:</strong>
                     <input type="text" name="email" class="form-control" value="{{$student->email}}">
                 </div>
+                <div class="col-md-12">
+                    <strong>dateOfBirth:</strong>
+                    <input type="text" name="dateOfBirth" class="form-control" value="{{$student->dateOfBirth}}">
+                </div>
+                <div class="col-md-12">
+                    <strong>Phone:</strong>
+                    <input type="text" name="phone" class="form-control" value="{{$student->phone}}">
+                </div>
+                {{--<div class="col-md-12">--}}
+                    {{--<strong>ID card or Passport:</strong>--}}
+                    {{--<input type="text" name="passport" class="form-control" value="{{$student->passport}}">--}}
+                {{--</div>--}}
+                {{--<div class="col-md-12">--}}
+                    {{--<strong>Class:</strong>--}}
+                    {{--<input type="text" name="class" class="form-control" value="{{$student->class}}">--}}
+                {{--</div>--}}
+                {{--<div class="col-md-12">--}}
+                    {{--<strong>Address:</strong>--}}
+                    {{--<input type="text" name="address" class="form-control" value="{{$student->address}}">--}}
+                {{--</div>--}}
+
                 <div class="col-md-12" style="margin-top: 20px">
                     <a href="{{route('student.index')}}" class="btn btn-sm btn-success">Back</a>
                     <button type="submit" class="btn btn-sm btn-primary">Submit</button>
